@@ -3,7 +3,7 @@
 
 #include "common.h"
 
-void encoderTimInit(void);
+void encoderInit(void);
 float encoderGetRPM(void);
 
 #endif /* ENCODER_H_ */

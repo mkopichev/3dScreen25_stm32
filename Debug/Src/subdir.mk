@@ -6,6 +6,8 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/common.c \
+../Src/controlSystem.c \
+../Src/controller.c \
 ../Src/dcMotor.c \
 ../Src/delayMs.c \
 ../Src/encoder.c \
@@ -16,6 +18,8 @@ C_SRCS += \
 
 OBJS += \
 ./Src/common.o \
+./Src/controlSystem.o \
+./Src/controller.o \
 ./Src/dcMotor.o \
 ./Src/delayMs.o \
 ./Src/encoder.o \
@@ -26,6 +30,8 @@ OBJS += \
 
 C_DEPS += \
 ./Src/common.d \
+./Src/controlSystem.d \
+./Src/controller.d \
 ./Src/dcMotor.d \
 ./Src/delayMs.d \
 ./Src/encoder.d \
@@ -42,7 +48,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/common.cyclo ./Src/common.d ./Src/common.o ./Src/common.su ./Src/dcMotor.cyclo ./Src/dcMotor.d ./Src/dcMotor.o ./Src/dcMotor.su ./Src/delayMs.cyclo ./Src/delayMs.d ./Src/delayMs.o ./Src/delayMs.su ./Src/encoder.cyclo ./Src/encoder.d ./Src/encoder.o ./Src/encoder.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/userLed.cyclo ./Src/userLed.d ./Src/userLed.o ./Src/userLed.su
+	-$(RM) ./Src/common.cyclo ./Src/common.d ./Src/common.o ./Src/common.su ./Src/controlSystem.cyclo ./Src/controlSystem.d ./Src/controlSystem.o ./Src/controlSystem.su ./Src/controller.cyclo ./Src/controller.d ./Src/controller.o ./Src/controller.su ./Src/dcMotor.cyclo ./Src/dcMotor.d ./Src/dcMotor.o ./Src/dcMotor.su ./Src/delayMs.cyclo ./Src/delayMs.d ./Src/delayMs.o ./Src/delayMs.su ./Src/encoder.cyclo ./Src/encoder.d ./Src/encoder.o ./Src/encoder.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/userLed.cyclo ./Src/userLed.d ./Src/userLed.o ./Src/userLed.su
 
 .PHONY: clean-Src
 

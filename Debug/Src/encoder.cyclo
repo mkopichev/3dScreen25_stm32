@@ -1,0 +1,5 @@
+../Src/../Inc/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Src/encoder.c:10:6:encoderInit	5
+../Src/encoder.c:46:6:DMA1_Channel5_IRQHandler	8
+../Src/encoder.c:83:7:encoderGetRPM	2
+../Src/encoder.c:92:6:TIM2_IRQHandler	2

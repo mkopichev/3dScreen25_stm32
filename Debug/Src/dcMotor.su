@@ -1,0 +1,3 @@
+../Src/dcMotor.c:7:6:dcMotorInit	8	static
+../Src/dcMotor.c:35:6:dcMotorRun	16	static
+../Src/dcMotor.c:45:6:dcMotorStop	4	static

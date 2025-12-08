@@ -1,4 +1,6 @@
 "./Src/common.o"
+"./Src/controlSystem.o"
+"./Src/controller.o"
 "./Src/dcMotor.o"
 "./Src/delayMs.o"
 "./Src/encoder.o"

@@ -3,8 +3,6 @@
 
 #include "common.h"
 
-#define MAX_RPM 1360.0f
-
 void dcMotorInit(void);
 void dcMotorRun(uint8_t rpm);
 void dcMotorStop(void);

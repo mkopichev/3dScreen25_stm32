@@ -40,19 +40,19 @@ float controllerUpdate(Controller_t *controller, float setpoint,
 
 		output = controller->outMax;
 		// Clamping anti-windup
-		/*if (error * output > 0) {
+		if (error * output > 0) {
 
 			controller->integral -= error * controller->dt;
-		}*/
+		}
 	}
 	if (output < controller->outMin) {
 
 		output = controller->outMin;
 		// Clamping anti-windup
-		/*if (error * output > 0) {
+		if (error * output > 0) {
 
 			controller->integral -= error * controller->dt;
-		}*/
+		}
 	}
 
 	return output;

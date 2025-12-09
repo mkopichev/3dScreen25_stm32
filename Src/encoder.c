@@ -41,7 +41,7 @@ void encoderInit(void) {
 }
 
 uint16_t encoderPeriod = 0;
-bool motorStoppedFlag = false;
+bool motorStopFlag = false;
 
 void DMA1_Channel5_IRQHandler(void) {
 
@@ -76,7 +76,7 @@ void DMA1_Channel5_IRQHandler(void) {
 							dataArray[i] - dataArray[i - 1];
 		}
 	}
-	motorStoppedFlag = false;
+	motorStopFlag = false;
 	encoderPeriod = averageTmpValue >> 5;
 }
 
@@ -92,9 +92,9 @@ float encoderGetRPM(void) {
 void TIM2_IRQHandler(void) {
 
 	TIM2->SR = ~TIM_SR_UIF;
-	if (motorStoppedFlag) {
+	if (motorStopFlag) {
 
 		encoderPeriod = 0;
 	}
-	motorStoppedFlag = true;
+	motorStopFlag = true;
 }

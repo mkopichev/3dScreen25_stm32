@@ -1,6 +1,6 @@
 #include "../Inc/encoder.h"
 
-// Collect timer intervals between encoder pulses via DMA.
+// Collect timer intervals between encoder pulses from PA0 pin via DMA.
 // Calculate difference between pair of measurements and get average value.
 // Recalculate difference into RPM.
 

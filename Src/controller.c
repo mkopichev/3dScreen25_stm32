@@ -11,7 +11,7 @@ void controllerInit(Controller_t *controller, float kp, float ki, float kd,
 	controller->outMin = min;
 	controller->outMax = max;
 	controller->dt = deltaTime;
-	controller->integralLim = 2.0f * max;
+	controller->integralLim = 1.0f * max;
 }
 
 float controllerUpdate(Controller_t *controller, float setpoint,
@@ -21,7 +21,7 @@ float controllerUpdate(Controller_t *controller, float setpoint,
 	// proportional part
 	float P = controller->kp * error;
 	// integral part
-	controller->integral += error * controller->dt;
+	controller->integral += controller->ki * error * controller->dt;
 	if ((controller->integral > controller->integralLim)
 			|| (controller->integral < -controller->integralLim)) {
 
@@ -29,7 +29,7 @@ float controllerUpdate(Controller_t *controller, float setpoint,
 				(controller->integral = controller->integralLim) :
 				(controller->integral = -controller->integralLim);
 	}
-	float I = controller->ki * controller->integral;
+	float I = controller->integral;
 	// differential part
 	float D = controller->kd * (error - controller->prevError) / controller->dt;
 	controller->prevError = error;

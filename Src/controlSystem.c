@@ -3,7 +3,8 @@
 extern uint8_t cpuFreqSourceChoosen;
 extern Controller_t dcMotCtrl;
 
-float targetRPM = 300.0f;
+float targetRPM = 600.0f;
+float pidOutput;
 
 void controlSystemInit(void) {
 
@@ -29,6 +30,15 @@ void controlSystemInit(void) {
 void TIM4_IRQHandler(void) {
 
 	TIM4->SR &= ~TIM_SR_UIF;
-	float pidOutput = controllerUpdate(&dcMotCtrl, targetRPM, encoderGetRPM());
-	dcMotorRun((uint8_t)pidOutput);
+	static uint16_t softStartSetpoint = 0;
+	if (softStartSetpoint < (uint16_t) targetRPM) {
+
+		pidOutput = controllerUpdate(&dcMotCtrl, softStartSetpoint,
+				encoderGetRPM());
+		softStartSetpoint += 10;
+	} else {
+
+		pidOutput = controllerUpdate(&dcMotCtrl, targetRPM, encoderGetRPM());
+	}
+	dcMotorRun((uint8_t) pidOutput);
 }

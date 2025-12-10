@@ -1,7 +1,7 @@
 #include "common.h"
 
+extern uint8_t cpuFreqSourceChoosen;
 Controller_t dcMotCtrl;
-
 float rpm;
 
 int main(void) {
@@ -9,6 +9,7 @@ int main(void) {
 	if (!cpuFreqInit(PLL_SOURCE)) {
 
 		NVIC_SystemReset();
+		cpuFreqSourceChoosen = HSI_SOURCE;
 	}
 	userLedInit();
 	dcMotorInit();

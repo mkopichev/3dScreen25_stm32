@@ -3,7 +3,7 @@
 extern uint8_t cpuFreqSourceChoosen;
 extern Controller_t dcMotCtrl;
 
-float targetRPM = 600.0f;
+float targetRPM = 1360.0f;
 float pidOutput;
 
 void controlSystemInit(void) {

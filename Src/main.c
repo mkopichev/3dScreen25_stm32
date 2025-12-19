@@ -23,8 +23,8 @@ int main(void) {
 
 		rpm = encoderGetRPM();
 		userLedToggle(LED_ON);
-		delayMs(1000);
+		delayMs((uint16_t) rpm / 2);
 		userLedToggle(LED_OFF);
-		delayMs(1000);
+		delayMs((uint16_t) rpm / 2);
 	}
 }

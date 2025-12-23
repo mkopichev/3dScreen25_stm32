@@ -4,7 +4,8 @@ Src/delayMs.o: ../Src/delayMs.c ../Src/../Inc/delayMs.h \
  ../Src/../Inc/cmsis_compiler.h ../Src/../Inc/cmsis_gcc.h \
  ../Src/../Inc/system_stm32f1xx.h ../Src/../Inc/userLed.h \
  ../Src/../Inc/delayMs.h ../Src/../Inc/dcMotor.h ../Src/../Inc/encoder.h \
- ../Src/../Inc/controller.h ../Src/../Inc/controlSystem.h
+ ../Src/../Inc/controller.h ../Src/../Inc/controlSystem.h \
+ ../Src/../Inc/onButon.h
 ../Src/../Inc/delayMs.h:
 ../Src/../Inc/common.h:
 ../Src/../Inc/stm32f103xb.h:
@@ -19,3 +20,4 @@ Src/delayMs.o: ../Src/delayMs.c ../Src/../Inc/delayMs.h \
 ../Src/../Inc/encoder.h:
 ../Src/../Inc/controller.h:
 ../Src/../Inc/controlSystem.h:
+../Src/../Inc/onButon.h:

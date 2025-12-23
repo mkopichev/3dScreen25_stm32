@@ -1,3 +1,2 @@
-../Src/../Inc/core_cm3.h:1511:22:__NVIC_EnableIRQ	16	static
-../Src/controlSystem.c:9:6:controlSystemInit	8	static
-../Src/controlSystem.c:30:6:TIM4_IRQHandler	16	static
+../Src/controlSystem.c:11:6:controlSystemInit	4	static
+../Src/controlSystem.c:31:6:TIM4_IRQHandler	16	static

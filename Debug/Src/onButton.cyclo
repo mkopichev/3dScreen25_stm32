@@ -1,0 +1,4 @@
+../Src/../Inc/core_cm3.h:1511:22:__NVIC_EnableIRQ	2
+../Src/../Inc/core_cm3.h:1547:22:__NVIC_DisableIRQ	2
+../Src/onButton.c:9:6:onButtonInit	1
+../Src/onButton.c:24:6:EXTI15_10_IRQHandler	5

@@ -16,9 +16,8 @@ int main(void) {
 	encoderInit();
 	controllerInit(&dcMotCtrl, 0.05f, 0.3f, 0.0f, 0.0f, 100.0f,
 			10.0f / 1000.0f);
-
 	controlSystemInit();
-
+	onButtonInit();
 	for (;;) {
 
 		rpm = encoderGetRPM();

@@ -12,6 +12,7 @@ C_SRCS += \
 ../Src/delayMs.c \
 ../Src/encoder.c \
 ../Src/main.c \
+../Src/onButton.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
 ../Src/userLed.c 
@@ -24,6 +25,7 @@ OBJS += \
 ./Src/delayMs.o \
 ./Src/encoder.o \
 ./Src/main.o \
+./Src/onButton.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
 ./Src/userLed.o 
@@ -36,6 +38,7 @@ C_DEPS += \
 ./Src/delayMs.d \
 ./Src/encoder.d \
 ./Src/main.d \
+./Src/onButton.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
 ./Src/userLed.d 
@@ -48,7 +51,7 @@ Src/%.o Src/%.su Src/%.cyclo: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/common.cyclo ./Src/common.d ./Src/common.o ./Src/common.su ./Src/controlSystem.cyclo ./Src/controlSystem.d ./Src/controlSystem.o ./Src/controlSystem.su ./Src/controller.cyclo ./Src/controller.d ./Src/controller.o ./Src/controller.su ./Src/dcMotor.cyclo ./Src/dcMotor.d ./Src/dcMotor.o ./Src/dcMotor.su ./Src/delayMs.cyclo ./Src/delayMs.d ./Src/delayMs.o ./Src/delayMs.su ./Src/encoder.cyclo ./Src/encoder.d ./Src/encoder.o ./Src/encoder.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/userLed.cyclo ./Src/userLed.d ./Src/userLed.o ./Src/userLed.su
+	-$(RM) ./Src/common.cyclo ./Src/common.d ./Src/common.o ./Src/common.su ./Src/controlSystem.cyclo ./Src/controlSystem.d ./Src/controlSystem.o ./Src/controlSystem.su ./Src/controller.cyclo ./Src/controller.d ./Src/controller.o ./Src/controller.su ./Src/dcMotor.cyclo ./Src/dcMotor.d ./Src/dcMotor.o ./Src/dcMotor.su ./Src/delayMs.cyclo ./Src/delayMs.d ./Src/delayMs.o ./Src/delayMs.su ./Src/encoder.cyclo ./Src/encoder.d ./Src/encoder.o ./Src/encoder.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/onButton.cyclo ./Src/onButton.d ./Src/onButton.o ./Src/onButton.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/userLed.cyclo ./Src/userLed.d ./Src/userLed.o ./Src/userLed.su
 
 .PHONY: clean-Src
 

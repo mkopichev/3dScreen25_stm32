@@ -5,6 +5,7 @@
 "./Src/delayMs.o"
 "./Src/encoder.o"
 "./Src/main.o"
+"./Src/onButton.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
 "./Src/userLed.o"

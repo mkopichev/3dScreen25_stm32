@@ -1,0 +1,4 @@
+../Src/../Inc/core_cm3.h:1511:22:__NVIC_EnableIRQ	16	static
+../Src/../Inc/core_cm3.h:1547:22:__NVIC_DisableIRQ	16	static,ignoring_inline_asm
+../Src/onButton.c:9:6:onButtonInit	8	static
+../Src/onButton.c:24:6:EXTI15_10_IRQHandler	24	static

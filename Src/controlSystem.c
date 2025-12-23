@@ -6,6 +6,8 @@ extern Controller_t dcMotCtrl;
 float targetRPM = 1360.0f;
 float pidOutput;
 
+uint16_t softStartSetpoint = 0;
+
 void controlSystemInit(void) {
 
 	// APB1 prescaler is 2, so TIM4 frequency is x2
@@ -23,14 +25,12 @@ void controlSystemInit(void) {
 	}
 	TIM4->ARR = 1000; // 10 ms period
 	TIM4->DIER = TIM_DIER_UIE;
-	NVIC_EnableIRQ(TIM4_IRQn);
 	TIM4->CR1 = TIM_CR1_CEN;
 }
 
 void TIM4_IRQHandler(void) {
 
 	TIM4->SR &= ~TIM_SR_UIF;
-	static uint16_t softStartSetpoint = 0;
 	if (softStartSetpoint < (uint16_t) targetRPM) {
 
 		pidOutput = controllerUpdate(&dcMotCtrl, softStartSetpoint,
